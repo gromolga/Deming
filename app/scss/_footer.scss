@@ -1,0 +1,130 @@
+footer {
+	.container {
+		background-color: $gray-footer-bg;
+	}
+	h4 {
+		margin: 5px 0 0 0;
+		padding: 12px 0;
+		text-align: center;
+		border-radius: 5px 5px 0 0;
+		text-shadow: 3px 3px 2px $gray-footer-text-shadow;
+		font-style: italic;
+		color: #fff;
+	}
+	h5+p {
+		margin: 0;
+		margin-bottom: 13px;
+	}
+	a {
+		line-height: 1.7;
+		text-decoration: none;
+		color: $gray-main-text; 
+	}
+	.leftcol, .centercol, .rightcol {
+		float: left;
+		padding: 20px;
+	}
+	.leftcol {
+		width: 21%;
+	}
+	.centercol {
+		width: 47%;
+		padding-left: 25px;
+		li {
+			width: 152px;
+			box-sizing: padding-box;
+		}
+	}
+	.rightcol {
+		width: 19%;
+	}
+	h5 {
+		margin: 0;
+		margin-bottom: 7px;
+		font: 14px/1.2 bold $font-stack-Klavica;
+		text-transform: uppercase;
+	}
+	.twitter {
+		position: relative;
+	}
+	.twitter:after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: -10px;
+		display: block;
+		height: 20px;
+		width: 40px;
+		background-image: url("../img/icons/sprite.png");
+		background-position: -55px 37px;
+	}
+	.join-button {
+		position: relative;
+		display: block;
+		width: 150px;
+		.join-button-text {
+			display: block;
+			padding: 5px 15px;
+			border: 1px solid $gray-footer-button-dark-border;
+			border-radius: 5px 0 0 5px; 
+			font: 12px/1.5 $font-stack-MyriadPro;     
+			text-transform: uppercase;
+			box-shadow: 0 0 0 3px $gray-select-light-border;
+			color: #fff;
+		}
+	}
+	.join-button-icon {
+		position: absolute;
+		top: 0;
+		right: -35px;
+		height: 100%;
+		width: 35px;
+		border-radius: 0 5px 5px 0;
+		border: 1px solid $gray-footer-button-dark-border;
+		box-shadow: 0 0 3px $gray-select-light-border;
+		&:after {
+			content: "";
+			position: absolute;
+			height: 35px;
+			width: 35px;
+			background-image: url("../img/icons/sprite.png");
+			background-position: -105px 40px;
+		}
+	}
+	strong {
+		display: block;
+		font-weight: normal;
+		&:last-of-type {
+			margin-top: 20px;
+		}
+	}
+}
+.down-footer{
+	padding: 15px 0 70px 0;
+	p {
+		margin: 0;
+		text-align: center;
+	}
+	.copyright{
+		font-weight: bold;
+	}
+} 
+@media (max-width: 1050px) {
+	footer {
+		.leftcol, .centercol, .rightcol {
+			width: 30%;
+			padding-left: 0;
+			padding: 10px;
+		}
+		h4 {
+			padding: 12px 20px;
+		}
+	}
+}
+@media (max-width: 650px) {
+	footer {
+		.leftcol, .centercol, .rightcol {
+			width: 100%;
+		}
+	}
+}

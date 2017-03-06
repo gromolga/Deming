@@ -1,0 +1,151 @@
+@import "./variables.scss";
+.ui-widget.ui-widget-content {
+	border: none;
+}
+.ui-tabs {
+	padding: 0;
+	.ui-tabs-panel {
+		padding: 10px 0;
+	}
+	.ui-tabs-nav {
+		padding: 0;
+		li {
+			width: 33%;
+			margin: 0;
+			box-sizing: border-box;
+			border: 1px solid $gray-button-dark-border;
+			&:first-of-type {
+				border-radius: 5px 0 0 5px;
+			}
+			&:last-of-type {
+				border-radius: 0 5px 5px 0;
+			}
+			.ui-tabs-active {
+				margin-bottom: 0;
+				padding-bottom: 0;
+			}
+		}
+		.ui-tabs-anchor,
+		.tabs-header {
+			display: block;
+			float: none;
+			text-align: center;
+			font: 18px/1.2 $font-stack-Zurich;
+			text-transform: capitalize;
+			span {
+				position: relative;
+				&:before {
+					content: "";
+					position: absolute;
+					top: 7px;
+					left: -10px;
+					border-top: 5px solid transparent;
+					border-right: 5px solid transparent;
+					border-bottom: 5px solid transparent;
+					border-left: 7px solid $green-button-dark-gradient;
+				}
+			}
+		}
+		.ui-tab {
+			background: linear-gradient(to top, $gray-button-dark-gradient, $gray-button-light-gradient);
+		}
+		.ui-tabs-anchor {
+			padding: 0.4em 1em;
+		}
+	}
+}
+.ui-corner-top {
+	border-radius: 0;
+}
+.ui-widget-header {
+	border: none;
+	background: none;
+}
+.tabs .ui-state-active, 
+.tabs .ui-widget-content .ui-state-active, 
+.tabs .ui-widget-header .ui-state-active {
+	position: relative;
+	border-top: 1px solid $green-button-light-gradient;
+	box-shadow: -1px -1px 0 $green-button-dark-gradient;
+	text-shadow: 2px -3px 2px $green-text-shadow;
+	background: $green-button-light-gradient;
+	background: linear-gradient(to top, $green-button-dark-gradient, $green-button-light-gradient) !important; 
+	span:before {
+		content: "";
+		display: none;
+	}
+	&:after {
+		content: "";
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%);
+		display: block;
+		border-top: 7px solid $green-button-dark-gradient;
+		border-right: 5px solid transparent;
+		border-bottom: 5px solid transparent;
+		border-left: 5px solid transparent;
+	}
+}
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, .ui-button:active, 
+.ui-button.ui-state-active:hover {
+	border: none;
+	background-color: none;
+}
+.ui-selectmenu-button.ui-button {
+	margin: 10px 0;
+	padding: 0px;
+	box-shadow: 0 0 0 3px $gray-select-light-border;
+	outline: none;
+}
+.ui-button {
+	line-height: 20px;
+	.ui-icon {
+		position: relative;
+		margin-top: 2px;
+		margin-right: 2px;
+		height: 16px;
+		width: 18px;
+		border-radius: 3px;
+		background-image: none !important;
+		background-color: $gray-select-arrow;
+		&:after {
+			position: absolute;
+			content: "";
+			display: block;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-20%);
+			height: 0;
+			width: 0;
+			border-top: 5px solid #fff;
+			border-right: 5px solid transparent;
+			border-bottom: 5px solid transparent;
+			border-left: 5px solid transparent;
+		}
+	}
+} 
+.ui-selectmenu-button.ui-button {
+	width: 100%;
+}
+.ui-state-active, 
+.ui-widget-content .ui-state-active, 
+.ui-widget-header .ui-state-active, 
+a.ui-button:active, .ui-button:active {
+	background: $green-button-light-gradient;
+	background: linear-gradient(to top, $green-button-dark-gradient, $green-button-light-gradient); 
+}
+.ui-selectmenu-button.ui-button {
+	background: linear-gradient(to top, $gray-button-dark-gradient, $gray-button-light-gradient);
+}
+@media (max-width: 500px) {
+	.ui-tabs .ui-tabs-nav .ui-tabs-anchor, 
+	.ui-tabs .ui-tabs-nav .tabs-header {
+		font: 14px/1.2 $font-stack-Zurich;
+		span:before {
+			top: 4px;
+		}
+	}
+}

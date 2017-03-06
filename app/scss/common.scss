@@ -1,0 +1,100 @@
+@import "../libs/normalize-scss/normalize.scss";
+@import "./fonts.scss";
+@import "./jquery-ui-custom.scss";
+@import "./variables.scss";
+@import "./header.scss";
+@import "./main.scss";
+@import "./footer.scss";
+// Common documents styles
+body {
+	font: normal 12px/1.5 $font-stack-Arial;
+	color: $gray-main-text;
+	background-image: url(../img/bg-img.jpg);
+	background-color: $body-bg-color;
+}
+h1, .h1 {
+	font-size: 32px;
+	line-height: 1.2;
+}
+h2, .h2 {
+	font-size: 27px;
+	line-height: 1.2;
+}
+h3, .h3 {
+	font-size: 22px;
+	line-height: 1.2;
+}
+h4, .h4 {
+	font-size: 16px;
+	line-height: 1.2;
+}
+h5, .h5 {
+	font-size: 14px;
+	line-height: 1.2;
+}
+h6, .h6 {
+	font-size: 12px;
+	line-height: 1.2;
+}
+//Common classes for adding in stylesheet
+.clearfix:after {
+	content: "";
+	display: table;
+	width: 100%;
+	clear: both;
+}
+.container {
+	max-width: 990px;
+	margin: 0 auto;
+}
+.inline-block-list {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		vertical-align: top;
+		list-style-type: none;
+	}
+}
+.green-gradient {
+	box-sizing: border-box;
+	border-top: 1px solid $green-button-light-border;
+	box-shadow: 0 0 0 1px $green-button-dark-border;
+	background-color: $green-button-light-gradient;
+	background: linear-gradient(to top, $green-button-dark-gradient, $green-button-light-gradient);
+}
+.gray-light-gradient {
+	box-sizing: border-box;
+	border-bottom: 1px solid $gray-button-light-border;
+	box-shadow: 0 0 0 1px $gray-button-dark-border;
+	background-color: $gray-button-dark-gradient;
+	background: linear-gradient(to top, $gray-button-dark-gradient, $gray-button-light-gradient);
+}
+.brown-gradient {
+	box-sizing: border-box;
+	border-bottom: 2px solid $gray-footer-down-border;
+	background-color: $gray-footer-dark-gradient;
+	background: linear-gradient(to top, $gray-footer-dark-gradient, $gray-footer-light-gradient), url("../img/icons/sprite.png");
+}
+// Styles for a footed to bottom
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+.wrapper {
+	display: table;
+	margin: 0 auto;
+}
+.content-holder {
+	display: table-row;
+	height: 100%;
+}
+
+@media (max-width: 1050px) {
+	.container {
+		padding: 0 20px;
+	}
+}
+
+
